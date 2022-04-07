@@ -9,6 +9,7 @@ public class SaludosRestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SaludosRestApplication.class, args);
 		System.out.println("hola mundo");
+		System.out.println("intento dos");
 	}
 
 }
