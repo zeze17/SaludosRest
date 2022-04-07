@@ -8,13 +8,13 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 public class SaludosControllador {
-    private  static final String template= "Como vamos %s!";
+    private  static final String template= "Como vamos %s?";
     private  final AtomicLong counter = new AtomicLong();
-    private String country= "Republica de Colombia";
+    //private String country= "Republica de Colombia";
     @GetMapping("/saludos")
     public Saludos saludos(@RequestParam(value = "nombre", defaultValue = "Mundo") String nombre){
 
-        return new Saludos(counter.incrementAndGet(),String.format(template,nombre),country);
+        return new Saludos(counter.incrementAndGet(),String.format(template,nombre));
 
     }
 
